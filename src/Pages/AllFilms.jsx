@@ -23,7 +23,7 @@ const AllFilms = () => {
         <h1>Studio Ghibli Films</h1>
 <div className="row">
 
-              {(films.map(film => (
+              {(films.map((film) => (
           <div className=" card col-md-4" key={`film-card-${films?.id}`}>
             <h1 className="card-header text-center">{films?.title}</h1>
             <p className="card-body text-center">{films?.description}</p>           

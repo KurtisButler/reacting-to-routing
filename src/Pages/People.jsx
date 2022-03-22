@@ -22,7 +22,7 @@ const People = () => {
             <ul className="list-group">
               <li className="list-group-item d-flex justify-content-between align-items-center" key={`film: ${peoples.id}`}>
                 {peoples.name}
-                <Link to={`People/${peoples.id}`} className='btn btn-secondary'>Read More</Link>
+                <Link to={`People/${peoples.id}`} className='btn btn-secondary m-5' >Read More</Link>
               </li>
             </ul>
           ))};

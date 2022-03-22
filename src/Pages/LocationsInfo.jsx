@@ -23,7 +23,7 @@ const LocationsInfo = () => {
      
       <div className=" card col-md-4" key={`location-card-${location?.id}`}>
           <h1 className="card-header text-center">{location?.name}</h1>
-          <p className="card-body text-center">{`This place has a ${location?.atmosphere} type of atmosphere and a ${location?.landscape} type of landscape`}</p>
+          <p className="card-body text-center">{`This place has a ${location?.climate} type of climate and a ${location?.climate} type of landscape`}</p>
           <Link to='/locations' className=" btn btn-warning">Return To Locations</Link>
         </div>
     
