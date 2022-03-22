@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 const AllFilms = () => {
   const [films, setFilms] = useState([]);
-  
+
 
   useEffect(() => {
     fetch("https://ghibliapi.herokuapp.com/films")
@@ -20,16 +20,16 @@ const AllFilms = () => {
   return (
     <main className="container">
       <section className="row justify-content-center mt-5">
-          <div className="col-md-4 offset-2">
-        {films.map((film) => (
+        <div className="col-md-4 offset-2">
+          {films.map((film) => (
             <ul className="list-group">
               <li className="list-group-item d-flex justify-content-between align-items-center" key={`film: ${film.id}`}>
                 {film.title}
-                <Link to ={`/films/${film.id}`} className = 'btn btn-primary'>Read More</Link>
+                <Link to={`/films/${film.id}`} className='btn btn-primary'>Read More</Link>
               </li>
             </ul>
-        ))}
-          </div>
+          ))}
+        </div>
       </section>
     </main>
   );
