@@ -1,6 +1,7 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import logo from "./assets/ghiblipixel.png"
+import logo from "../assets/ghiblipixel.png"
+import './app.css'
 
 
 const NavBar = () => {
@@ -9,7 +10,7 @@ const NavBar = () => {
         
         <nav className = 'navbar'>
             <a href="https://www.studioghibli.com.au/" target = '_blank'>
-                <img src= {logo} alt="Image Loading" className = 'nav-image'></img></a>
+                <img src= {logo} alt="Image Loading" style={{height:'500px', width: '1550px'}} className = 'nav-image'></img></a>
             <ul className = 'nav-links'>
             <li className = 'nav-item'>
             <NavLink to = '/' exact activeClassName="active" className = 'link'>Home Page</NavLink>

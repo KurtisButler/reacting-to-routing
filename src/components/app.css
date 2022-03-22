@@ -1,0 +1,39 @@
+.nav-image {
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding:  2rem;
+    font-size: 2rem;
+    background-color: rgb(61, 51, 61);
+  
+  
+}
+
+.nav-links {
+    display: grid;
+    grid-gap: 8px;    
+}
+
+.nav-item {
+    position: relative;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(214, 116, 116);
+}
+
+
+.link:hover::before {
+    width: 100%;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: rgb(219, 146, 87)
+}
