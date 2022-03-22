@@ -7,34 +7,28 @@ import People from './Pages/People'
 import PeopleInfo from './Pages/PeopleInfo'
 import Locations from './Pages/LocationsInfo'
 import LocationsInfo from './Pages/LocationsInfo'
-// import Navbar from './components/Navbar'
+import NavBar from './components/NavBar'
 
 const App = () => {
     return (
         <BrowserRouter>
-            {/* <Navbar /> */}
+            <NavBar />
             <Routes>
 
-                <Route exact path='/'element={<HomePage />}/>
-                    
-                
-                <Route exact path='/films' element={<AllFilms />}/>
-                   
-               
-                <Route exact path='/films/:filmid' element={<Info />}/>
-                    
-                
-                <Route exact path='/people' element={<People />}/>
-                    
-                
-                <Route exact path='/people/:peopleid' element={<PeopleInfo />}/>
-                 
-               
-                <Route exact path='/locations' element={ <Locations />}/>
-                  
-                
-                <Route exact path='/locations/:locationsid' element={<LocationsInfo />}/>
-                   
+                <Route exact path='/' element={<HomePage />} />
+
+                <Route exact path='/films' element={<AllFilms />} />
+
+                <Route exact path='/films/:filmid' element={<Info />} />
+
+                <Route exact path='/people' element={<People />} />
+
+                <Route exact path='/people/:peopleid' element={<PeopleInfo />} />
+
+                <Route exact path='/locations' element={<Locations />} />
+
+                <Route exact path='/locations/:locationsid' element={<LocationsInfo />} />
+
                 <Route exact path='*'>
                     {() => <h1>404: Not Found</h1>}
                 </Route>
