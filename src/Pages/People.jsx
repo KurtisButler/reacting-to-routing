@@ -12,11 +12,12 @@ const People = () => {
         console.log(err)
       })
   }, []);
-  
+
   return (
     <main className="container">
       <section className="row justify-content-center mt-5">
         <div className="col-md-2 offset-2">
+
           {people.map((peoples) => (
             <ul className="list-group">
               <li className="list-group-item d-flex justify-content-between align-items-center" key={`film: ${peoples.id}`}>
@@ -24,7 +25,8 @@ const People = () => {
                 <Link to={`People/${peoples.id}`} className='btn btn-secondary'>Read More</Link>
               </li>
             </ul>
-          ))}
+          ))};
+
         </div>
       </section>
     </main>

@@ -21,16 +21,19 @@ const AllFilms = () => {
     <main className="container">
       <section className="row justify-content-center mt-5">
         <h1>Studio Ghibli Films</h1>
+<div className="row">
 
-        <div className="row">
-      (films.map(film => (
+              {(films.map(film => (
           <div className=" card col-md-4" key={`film-card-${films?.id}`}>
             <h1 className="card-header text-center">{films?.title}</h1>
-            <p className="card-body text-center">{films?.description}</p>
+            <p className="card-body text-center">{films?.description}</p>           
             <Link to='/films' className=" btn btn-primary">Return To AllFilms</Link>
+      
           </div>
+        )))
+      }
         </div>
-        )));
+
       </section>
     </main>
   )

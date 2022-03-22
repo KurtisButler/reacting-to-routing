@@ -13,10 +13,14 @@ const Locations = () => {
         console.log(err)
       })
   }, []);
+
+
   return (
+
     <main className="container">
       <section className="row justify-content-center mt-5">
-        <div className="col-md-4 offset-2">
+        <div className="col-md-4">
+          
           {location.map((loc) => (
             <ul className="list-group">
               <li className="list-group-item d-flex justify-content-between align-items-center" key={`location: ${loc.id}`}>
