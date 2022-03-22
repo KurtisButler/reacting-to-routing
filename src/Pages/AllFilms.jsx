@@ -1,15 +1,15 @@
-import { useParams, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import React, { useState, useEffect } from "react";
 
 
 const AllFilms = () => {
   const [films, setFilms] = useState([]);
-  const { filmid } = useParams();
+  
 
   useEffect(() => {
-    fetch(`https://ghibliapi.herokuapp.com/films/${filmid}`)
+    fetch("https://ghibliapi.herokuapp.com/films")
       .then((res) => res.json())
-      .then((film) => setFilms(film))
+      .then((films) => setFilms(films))
       .catch((err) => {
         err = new Error('Failed to Fetch')
         console.log(err)
@@ -20,24 +20,19 @@ const AllFilms = () => {
   return (
     <main className="container">
       <section className="row justify-content-center mt-5">
-        <h1>Studio Ghibli Films</h1>
-<div className="row">
-
-              {(films.map((film) => (
-          <div className=" card col-md-4" key={`film-card-${films?.id}`}>
-            <h1 className="card-header text-center">{films?.title}</h1>
-            <p className="card-body text-center">{films?.description}</p>           
-            <Link to='/films' className=" btn btn-primary">Return To AllFilms</Link>
-      
+          <div className="col-md-4 offset-2">
+        {films.map((film) => (
+            <ul className="list-group">
+              <li className="list-group-item d-flex justify-content-between align-items-center" key={`film: ${film.id}`}>
+                {film.title}
+                <Link to ={`/films/${film.id}`} className = 'btn btn-primary'>Read More</Link>
+              </li>
+            </ul>
+        ))}
           </div>
-        )))
-      }
-        </div>
-
       </section>
     </main>
-  )
+  );
+};
 
-}
-
-export default AllFilms
+export default AllFilms;

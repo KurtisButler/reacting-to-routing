@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 const LocationsInfo = () => {
   const [location, setLocation] = useState(null);
-  const { locationsid } = useParams()
+  const {locationsid} = useParams()
 
   useEffect(() => {
     fetch(`https://ghibliapi.herokuapp.com/locations/${locationsid}`)
@@ -14,7 +14,7 @@ const LocationsInfo = () => {
         err = new Error('Failed to Fetch')
         console.log(err)
       })
-  }, []);
+  }, [locationsid]);
 
 
   return (

@@ -14,7 +14,7 @@ const Info = () => {
         err = new Error('Failed to Fetch')
         console.log(err)
       })
-  }, []);
+  }, [filmid]);
 
 
   return (
@@ -24,7 +24,7 @@ const Info = () => {
         <div className=" card col-md-4" key={`film-card-${film?.id}`}>
           <h1 className="card-header text-center">{film?.title}</h1>
           <p className="card-body text-center">{film?.description}</p>
-          <Link to='/film' className=" btn btn-danger">Return to AllFilms</Link>
+          <Link to='/Films' className=" btn btn-danger">Return to All Films</Link>
         </div>
 
       </section>

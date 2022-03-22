@@ -14,7 +14,7 @@ const PeopleInfo = () => {
         err = new Error('Failed to Fetch')
         console.log(err)
       })
-  }, []);
+  }, [peopleid]);
 
 
   return (
