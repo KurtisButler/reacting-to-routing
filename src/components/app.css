@@ -34,3 +34,8 @@
   text-decoration: none;
   color: rgb(219, 146, 87);
 }
+
+.scroll {
+  max-height: 100px;
+    overflow-y: auto;
+}

@@ -16,15 +16,15 @@ const People = () => {
   return (
     <main className="container">
       <section className="row justify-content-center mt-5">
-        <div className="col-md-2 offset-2">
+        <div className="col offset-2">
 
           {people.map((peoples) => (
-            <ul className="list-group">
-              <li className="list-group-item d-flex justify-content-between align-items-center" key={`film: ${peoples.id}`}>
-                {peoples.name}
-                <Link to={`/People/${peoples.id}`} className='btn btn-secondary btn-sm m-5' >Read More</Link>
-              </li>
-            </ul>
+            <div className="card mb-4" key={`film-card-${peoples?.id}`}>
+              <h1 className="card-header text-center">{peoples?.name}</h1>
+              <p className="card-body text-center">{peoples?.description}</p>
+              <Link to={`/People/${peoples.id}`} className=" btn btn-success">Read More</Link>
+            </div>
+
           ))};
 
         </div>

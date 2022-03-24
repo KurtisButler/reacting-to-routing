@@ -16,20 +16,18 @@ const Locations = () => {
 
 
   return (
-
     <main className="container">
-      <section className="row justify-content-center mt-5">
-        <div className="col-md-4">
-
-          {location.map((loc) => (
+      <section className="row justify-content-center mt-4">
+          <div className="col-md-6 offset-2">
+        {location.map((loc) => (
             <ul className="list-group">
               <li className="list-group-item d-flex justify-content-between align-items-center" key={`location: ${loc.id}`}>
                 {loc.name}
-                <Link to={`/locations/${loc.id}`} className='btn btn-primary btn-sm'>Read More</Link>
+                <Link to ={`/locations/${loc.id}`} className = 'btn btn-success'>Read More</Link>
               </li>
             </ul>
-          ))}
-        </div>
+        ))}
+          </div>
       </section>
     </main>
   );

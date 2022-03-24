@@ -5,7 +5,7 @@ import AllFilms from './Pages/AllFilms.jsx'
 import Info from './Pages/FilmInfo'
 import People from './Pages/People'
 import PeopleInfo from './Pages/PeopleInfo'
-import Locations from './Pages/LocationsInfo'
+import Locations from './Pages/Locations'
 import LocationsInfo from './Pages/LocationsInfo'
 import NavBar from './components/NavBar'
 
@@ -27,7 +27,7 @@ const App = () => {
 
                 <Route exact path='/locations' element={<Locations />} />
 
-                <Route exact path='/locations/:locationsid' element={<LocationsInfo />} />
+                <Route exact path='/locations/:locationsid' element={<LocationsInfo/>}/>
 
                 <Route exact path='*'>
                     {() => <h1>404: Not Found</h1>}

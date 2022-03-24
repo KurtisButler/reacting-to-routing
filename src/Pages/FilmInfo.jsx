@@ -24,7 +24,7 @@ const Info = () => {
         <div className=" card col-md-4" key={`film-card-${film?.id}`}>
           <h1 className="card-header text-center">{film?.title}</h1>
           <p className="card-body text-center">{film?.description}</p>
-          <Link to='/Films' className=" btn btn-danger">Return to All Films</Link>
+          <Link to='/Films' className=" btn btn-primary">Return to All Films</Link>
         </div>
 
       </section>

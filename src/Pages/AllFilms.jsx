@@ -25,7 +25,7 @@ const AllFilms = () => {
             <ul className="list-group">
               <li className="list-group-item d-flex justify-content-between align-items-center" key={`film: ${film.id}`}>
                 {film.title}
-                <Link to={`/films/${film.id}`} className='btn btn-primary'>Read More</Link>
+                <Link to={`/films/${film.id}`} className='btn btn-success'>Read More</Link>
               </li>
             </ul>
           ))}
