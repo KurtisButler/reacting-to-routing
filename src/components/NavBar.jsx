@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import logo from "../assets/ghiblipixel.png"
+import logo from "../assets/ghibliknit.png"
 import './app.css'
 
 

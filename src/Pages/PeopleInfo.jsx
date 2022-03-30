@@ -23,7 +23,7 @@ const PeopleInfo = () => {
 
         <div className=" card col-md-4" key={`film-card-${people?.id}`}>
           <h1 className="card-header text-center">{people?.name}</h1>
-          <p className="card-body text center">{`This person is ${people?.age} years old, is a ${people?.gender}, and has amazing ${people?.hair_color} hair`}</p>
+          <p className="card-body text center">{`This person is ${people?.age} years old, is a ${people?.gender}, and has ${people?.hair_color} hair`}</p>
           <Link to='/people' className=" btn btn-primary">Return To People</Link>
         </div>
 
